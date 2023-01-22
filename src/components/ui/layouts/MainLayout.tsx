@@ -1,5 +1,7 @@
+import { Box } from "@mui/material";
 import Head from "next/head";
 import React, { FC } from "react";
+import { Header } from "../navbar";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,15 +12,19 @@ interface LayoutProps {
 export const MainLayout: FC<LayoutProps> = ({
   children,
   title = "CV | Allan Castro",
-  description = "Portfolio of Allan Castro",
+  description = "Portfolio de Allan Castro - Desarrollador Web",
 }) => {
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={description} />
       </Head>
 
-      <main>{children}</main>
+      <Box>
+        <Header />
+        <main>{children}</main>
+      </Box>
     </>
   );
 };

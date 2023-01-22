@@ -1,0 +1,54 @@
+.nav-item {
+    padding-bottom: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item::after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #22cc6a;
+    width: 0;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    position: absolute;
+    display: block;
+}
+
+.active-line {
+    width: 30px;
+    left: 0;
+    height: 2px;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    background-color: #22cc6a;
+}
+
+.nav-item:hover:after {
+    width: 30px;
+    left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-item {
+        width: 100%;
+        padding: 1rem 2rem;
+        text-align: center;
+
+
+    }
+
+
+    .nav-item:hover:after {
+        width: 0;
+        left: 0;
+    }
+
+    .active-line {
+        width: 0;
+        left: 0;
+    }
+}

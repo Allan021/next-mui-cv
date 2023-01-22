@@ -21,7 +21,8 @@
       "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"],
-      "@themes/*": ["./src/themes/*"]
+      "@themes/*": ["./src/themes/*"],
+      "@/context/*": ["./src/context/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
